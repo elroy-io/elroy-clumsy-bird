@@ -1,0 +1,22 @@
+{
+  "name": "elroy-clumsy-bird",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/elroy-io/elroy-clumsy-bird.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elroy-io/elroy-clumsy-bird/issues"
+  },
+  "homepage": "https://github.com/elroy-io/elroy-clumsy-bird",
+  "dependencies": {
+    "elroy-hue-driver": "0.0.2"
+  }
+}
