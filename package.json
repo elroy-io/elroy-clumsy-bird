@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/elroy-io/elroy-clumsy-bird",
   "dependencies": {
-    "elroy-hue-driver": "0.0.2",
+    "elroy-hue-driver": "0.0.3",
     "arduino-firmata": "^0.3.0"
   }
 }
