@@ -7,4 +7,10 @@ ClumsyBird.prototype.init = function(elroy) {
     .subscribe(function(button) {
       elroy.expose(button);
     });
+
+  elroy.observe('type="huehub"')
+    .subscribe(function(button) {
+      elroy.expose(button);
+    });
+
 };

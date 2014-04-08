@@ -5,9 +5,12 @@ var ButtonDriver = module.exports = function() {
   this.name = 'button';
   this.state = 'up';
   this._pressEmitter = null;
+  
+  return;
 
   this._board = new ArduinoFirmata();
   this._board.connect('/dev/tty.usbmodem1451');
+  
   
   var self = this;
   this._board.on('connect', function() {
