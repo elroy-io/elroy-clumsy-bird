@@ -1,8 +1,30 @@
+var ArduinoFirmata = require('arduino-firmata');
+
 var ButtonDriver = module.exports = function() {
   this.type = 'button';
   this.name = 'button';
   this.state = 'up';
   this._pressEmitter = null;
+
+  this._board = new ArduinoFirmata();
+  this._board.connect('/dev/tty.usbmodem1451');
+  
+  var self = this;
+  this._board.on('connect', function() {
+    console.log('connected');
+    self._board.pinMode(2, ArduinoFirmata.INPUT);
+    self._board.on('digitalChange', function(e) {
+      if (!self._pressEmitter || e.pin !== 2) {
+        return;
+      }
+
+      if (e.value === true) {
+        self.call('press');
+      } else if (e.value === false) {
+        self.call('lift');
+      }
+    });
+  });
 };
 
 ButtonDriver.prototype.init = function(config) {
@@ -24,7 +46,7 @@ ButtonDriver.prototype.press = function(cb) {
   this.state = 'down';
 
   if (this._pressEmitter) {
-    console.log('emitting pressing');
+
     this._pressEmitter.emit('data', 1);
   }
 
