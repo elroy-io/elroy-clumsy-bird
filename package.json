@@ -1,5 +1,5 @@
 {
-  "name": "elroy-clumsy-bird",
+  "name": "zetta-clumsy-bird",
   "version": "0.0.0",
   "description": "",
   "main": "app.js",
@@ -8,16 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/elroy-io/elroy-clumsy-bird.git"
+    "url": "git://github.com/zettajs/zetta-clumsy-bird.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/elroy-io/elroy-clumsy-bird/issues"
+    "url": "https://github.com/zettajs/zetta-clumsy-bird/issues"
   },
-  "homepage": "https://github.com/elroy-io/elroy-clumsy-bird",
+  "homepage": "https://github.com/zettajs/zetta-clumsy-bird",
   "dependencies": {
-    "elroy-hue-driver": "0.0.3",
+    "zetta-hue-driver": "0.0.3",
     "arduino-firmata": "^0.3.0"
   }
 }
